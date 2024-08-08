@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 DOM Methods Part3 (Events and Actions)</title>
+</head>
+<body>
+
+    <h1>Hello Bacho - PW SKILLS</h1>
+    <p id="js"></p>
+
+    <!-- Button Clicking -->
+    <button onclick="button()" id="namaste">Submit</button>    <!-- button = Function -->
+    <button ondblclick="button1()" id="namaste1">Submit</button>    <!-- doubleClick -->
+
+    <script>
+
+
+        // Clicking anywhere on body
+        document.addEventListener("click" , hello); // (Action (click) , Function Calling to Implement Action)
+        function hello(){
+            document.getElementById("js").innerText = "Namaste Baccho";
+        }
+
+        document.addEventListener("dblclick" , hola);  // Double Click
+        function hola(){
+            document.querySelector("#js").innerText = "Hola Baccho";
+        }
+
+        document.addEventListener("mouseenter" , hey);  // As the Mouse Enters (Not Usually Used)
+        function hey(){
+            document.querySelector("#js").innerText = "YO YO";
+        }
+        // more actions - mousehover, etc.
+
+
+        // For Button Clicking
+        function button(){
+            document.getElementById("namaste").innerText="Namaste";   // if-else for login-logout
+            document.getElementById("namaste").style.color="red";
+            document.getElementById("namaste").style.backgroundColor="black";
+            document.getElementById("namaste").style.padding = "16px";
+            document.getElementById("namaste").style.border="2px solid red";
+        }
+
+        function button1(){
+            document.getElementById("namaste1").innerText="Namaste";   // if-else for login-logout
+            document.getElementById("namaste1").style.color="white";
+            document.getElementById("namaste1").style.backgroundColor="red";
+            document.getElementById("namaste1").style.padding = "16px";
+            document.getElementById("namaste1").style.border="2px solid black";
+        }
+
+    </script>
+
+</body>
+</html>

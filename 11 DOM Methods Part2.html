@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods Part 2 (Adding and Deleting Elements)</title>
+
+</head>
+<body>
+    
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <script>
+
+        // Create Element (First Create, then Add)
+        let title = document.createElement("h1");
+        title.style.fontsize = '25px';
+        title.className = "PW Skills";
+        title.textContent = "Hello";  // Text to be Added
+        console.log(title);
+        document.body.appendChild(title);  // To insert data on screen
+    
+
+        // Remove Element (First Target, then Remove)
+        let ul = document.querySelector("ul");
+        console.log(ul);
+        let lists = document.querySelectorAll("li");  // To Catch All Lists
+        console.log(lists);
+
+        // For Loop, best for Array
+        for(list of lists){          // (Of) For Itrating all Array Elements
+            ul.removeChild("list");
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods Part 1 (Manipulating Elements present in Document) </title>
+
+</head>
+<body>
+
+    <!-- Targeting Elements (and Manipulating), by different means -->
+
+
+    <!-- Id (Unique) -->
+    <p id="one"> <span>Hello</span> Namaste </p>
+
+    <!-- Class (Duplicated) -->
+    <ul>
+        <li class="tech">One</li>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+
+    <!-- TagName -->
+    <h4>Hey</h4>
+    <h4>Namaste</h4>
+    <h4>Hola (Spanish)</h4>
+
+    <!-- Query Selector (Can do all 3 tasks at once, using #, . , tagname) -->
+    <h2>YO</h2>
+    <h2 class="yola">YO Hola</h2>
+    <h2 id="yolaa">YOO Hey</h2>
+
+    <script>
+        
+        // Id (Unique)
+        let var1 = document.getElementById("one");  // needs to be stored in variable to access
+        console.log(var1);              // To catch
+        console.log(var1.innerText);    // To catch only the inner text
+        console.log(var1.innerHTML);    // To catch inner HTML tags as well with inner text
+        
+        // Class (Duplicated)
+        let var2 = document.getElementsByClassName("tech");     // documnent is usually connected to Windows
+        console.log(var2);
+        console.log(var2[2].innerText);     // For selecting single list, use array
+        var2[1].innerText = "NodeJs";
+
+        // TagName
+        let var3 = document.getElementsByTagName("h4");
+        console.log(var3);
+        console.log(var3[1].innerHTML);
+        var3[2].innerText = "Hello PW Skills";  // Telling Index number
+        var3[2].style.color = "red" ;  // Color ()
+        
+
+        // Query Selector
+        let var4 = document.querySelector(".yola"); // By Class
+        console.log(var4.style.color = "blue");
+
+        let var5 = document.querySelector("#yolaa"); // By Id
+        console.log(var5.style.color = "green");
+
+        var4.className = "Hello1";  // ClassName Changed
+        console.log(var4);
+        var5.classList = "Hey1 Hey3 Hola2"; // Multiple ClassName
+        console.log(var5);
+
+        var4.setAttribute("Name" , "Surya") // To Add Attribute  ("Attribute Name" , "Value")
+        console.log(var4);
+        
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
